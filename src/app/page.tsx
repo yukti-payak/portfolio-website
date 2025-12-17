@@ -23,6 +23,7 @@ import {
 } from "lucide-react";
 import {
   SiMongodb,
+  SiLeetcode,
   SiExpress,
   SiReact,
   SiNodedotjs,
@@ -53,7 +54,7 @@ function Page() {
     setIsVisible(true);
   }, []);
 
-  const showNotification = (message, type) => {
+  const showNotification = (message: string, type: "success" | "error") => {
     setNotification({ visible: true, message, type });
 
     setTimeout(() => {
@@ -61,11 +62,13 @@ function Page() {
     }, 4000);
   };
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const response = await fetch("/api/contact", {
@@ -138,7 +141,12 @@ function Page() {
       href: "https://www.linkedin.com/in/sudhir-rathod-8b3715250/",
       label: "LinkedIn",
     },
-    { icon: Mail, href: "mailto:rathodsudhir326@gmail.com", label: "Email" },
+    {
+      icon: SiLeetcode, // Use the icon from react-icons
+      href: "https://leetcode.com/u/Sudhir_Rathod_05/", // Replace with your username
+      label: "LeetCode",
+    },
+
   ];
 
   const NotificationIcon =
@@ -155,7 +163,7 @@ function Page() {
       id="home"
       className="min-dvh-screen bg-black text-white font-sans flex flex-col items-center"
     >
-      {/* -------------------- FLOATING NOTIFICATION BANNER -------------------- */}
+      {/* -- NOTIFICATION BANNER -- */}
       <div
         className={`fixed top-4 left-1/2 -translate-x-1/2 z-[100] p-4 rounded-lg text-white shadow-xl max-w-sm w-full transition-all duration-500 transform 
           ${notificationBg} ${notificationShadow} ${
@@ -169,7 +177,7 @@ function Page() {
           <p className="text-sm font-medium">{notification.message}</p>
         </div>
       </div>
-      {/* -------------------- END NOTIFICATION BANNER -------------------- */}
+
 
       <nav
         className={`fixed top-0 left-0 right-0 z-50 py-4 bg-black/90 backdrop-blur-sm 
@@ -178,10 +186,8 @@ function Page() {
          }`}
       >
         <div className="container mx-auto px-4 max-w-6xl flex justify-between items-center">
-          {/* Left Side: Empty or Logo (can be used later) */}
           <div className="w-1/4 hidden sm:block"></div>
 
-          {/* Center: Navigation Links */}
           <div className="flex gap-4 sm:gap-8 p-2 rounded-full border border-gray-700 bg-gray-900/50 shadow-lg">
             {navItems.map((item) => (
               <a
@@ -195,20 +201,15 @@ function Page() {
             ))}
           </div>
 
-          {/* Right Side: Location Icon and Text FIX */}
           <div className="w-1/4 flex justify-end">
             <div className="flex items-center gap-1 font-medium text-gray-400">
               <MapPin className="w-4 h-4 text-red-700" />
-              {/* Adjusted classes: Visible on all screens, but uses text-xs for mobile compactness */}
               <span className="text-xs sm:text-sm">{locationItem.name}</span>
             </div>
           </div>
         </div>
       </nav>
 
-      {/* MAIN CONTENT WRAPPER 
-        pb-20 set back to a normal amount; extra scrolling space is managed by the footer's large margin-top and padding.
-      */}
       <div className="w-full max-w-6xl px-4 pt-24 sm:pt-32 pb-20">
         <header
           className={`w-full text-center mb-12 sm:mb-20 transition-opacity duration-1000 ease-in ${
@@ -404,7 +405,6 @@ function Page() {
 
         <section id="contact" className="w-full py-12 sm:py-20">
           {" "}
-          {/* Reduced vertical padding here */}
           <div className="text-center mb-12">
             <h1 className="text-xl sm:text-2xl font-bold tracking-widest uppercase text-indigo-400">
               <ShinyText
@@ -419,7 +419,6 @@ function Page() {
           </div>
           <div className="max-w-xl mx-auto p-6 sm:p-8 bg-gray-900 rounded-xl border border-gray-700 shadow-xl">
             <form onSubmit={handleSubmit} method="POST" className="space-y-6">
-              {/* Name Input */}
               <div>
                 <label
                   htmlFor="name"
@@ -438,7 +437,6 @@ function Page() {
                 />
               </div>
 
-              {/* Email Input */}
               <div>
                 <label
                   htmlFor="email"
@@ -457,7 +455,6 @@ function Page() {
                 />
               </div>
 
-              {/* Message Textarea */}
               <div>
                 <label
                   htmlFor="message"
@@ -488,7 +485,7 @@ function Page() {
           </div>
         </section>
       </div>
-      {/* Footer has mt-12 which should provide separation */}
+
       <footer className="w-full bg-gray-950 border-t border-gray-800 py-10 sm:py-12">
         <div className="container mx-auto px-4 max-w-6xl text-center">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-6 sm:mb-8">
