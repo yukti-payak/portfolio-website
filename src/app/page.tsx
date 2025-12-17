@@ -151,15 +151,12 @@ function Page() {
   const NotificationIcon =
     notification.type === "success" ? CheckCircle : XOctagon;
   const notificationBg =
-    notification.type === "success" ? "bg-indigo-600" : "bg-red-600";
+    notification.type === "success" ? "bg-green-600" : "bg-red-600";
   const notificationShadow =
     notification.type === "success"
-      ? "shadow-indigo-500/50"
+      ? "shadow-green-500/50"
       : "shadow-red-500/50";
 
-  const handleAnimationComplete = () => {
-    console.log("Animation completed!");
-  };
 
   return (
     <div
@@ -242,7 +239,7 @@ function Page() {
                 animateBy="letters"
                 direction="top"
                 className="text-2xl mb-8"
-                onAnimationComplete={handleAnimationComplete}
+
               />
             </h1>
             <p className="text-lg text-gray-400 max-w-lg">
@@ -255,7 +252,7 @@ function Page() {
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
               <a
-                href="#projects"
+                href="https://drive.google.com/file/d/1UoXp_gZs3xWYkioM6KhjzEjXwEQ-SLeW/view?usp=sharing"
                 className="group flex cursor-pointer items-center gap-2  text-white font-semibold rounded-lg"
               >
                 <StarBorder
@@ -265,7 +262,7 @@ function Page() {
                   speed="3s"
                   thickness={1}
                 >
-                  View My Work
+                  Resume
                 </StarBorder>
               </a>
               <div className="flex gap-4">
@@ -474,7 +471,7 @@ function Page() {
               {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-3 px-6 py-3 bg-white text-black font-bold rounded-lg   shadow-md hover:bg-indigo-600 hover:text-white hover:shadow-indigo-500/50 transition-all duration-300"
+                className="w-full flex items-center justify-center gap-3 px-6 py-3 bg-white text-black font-bold rounded-lg   shadow-md hover:bg-green-600 hover:text-white hover:shadow-indigo-500/50 transition-all duration-300"
               >
                 Send Message
                 <Send className="w-5 h-5" />
