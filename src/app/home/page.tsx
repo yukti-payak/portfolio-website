@@ -8,7 +8,7 @@ export default function Home() {
         <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
           Hi, I'm <span className="text-blue-600">Your Name</span>
         </h1>
-        <p className="text-xl md:text-2xl text-gray-600 mb-8">
+        <p className="text-xl md:text-2xl  mb-8" style={{color:"#EDEDED"}}>
           Full-Stack Developer | Building Digital Experiences
         </p>
         <div className="flex gap-4 justify-center">

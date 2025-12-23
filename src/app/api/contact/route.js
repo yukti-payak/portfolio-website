@@ -11,14 +11,14 @@ export async function POST(request) {
         service: 'gmail', // Or 'SendGrid', 'Outlook', etc.
         auth: {
             user: process.env.EMAIL_USER,    
-            pass: process.env.EMAIL_PASSKEY, 
+            pass: process.env.EMAIL_PASS, 
         },
     });
 
     // 2. Define the email content
     const mailOptions = {
         from: process.env.EMAIL_USER,
-        to: 'rathodsudhir326@gmail.com', // Where you want to receive it
+        to: 'payakyukti2003@gmail.com', // Where you want to receive it
         subject: `New Portfolio Message from ${name}`,
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
         html: `<p><strong>Name:</strong> ${name}</p><p><strong>Email:</strong> ${email}</p><p><strong>Message:</strong> ${message}</p>`,
