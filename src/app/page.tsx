@@ -34,6 +34,9 @@ import { FaGitAlt } from "react-icons/fa";
 import StarBorder from "@/components/StarBorder";
 import ShinyText from "@/components/ShinyText";
 import BlurText from "@/components/BlurText";
+  import DecryptedText from "@/components/DecryptedText";
+import TextType from "@/components/TextType";
+ 
 
 function Page() {
   const [isVisible, setIsVisible] = useState(false);
@@ -103,6 +106,7 @@ function Page() {
   const projectsData = [
     {
       title: "ZenTrade : Interactive Analytic Suite",
+     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjHD7VdsC3kRtB2UoYJV0shx7jzmKYuONsSg&s",
       description:
         "Designed and developed a full-stack stock trading platform using the MERN stack, allowing users to place buy orders and track portfolio holdings through a fully responsive, feature-complete dashboard.",
       tech: ["React", "Node.js", "Express", "MongoDB"],
@@ -112,6 +116,7 @@ function Page() {
     },
     {
       title:  "TravelNest : Geo Enabled Property Listing Platform",
+image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjHD7VdsC3kRtB2UoYJV0shx7jzmKYuONsSg&s",
       description:
         "Engineered a scalable property rental platform leveraging the MVC architectural pattern, providing users with intuitive property browsing, listing, and management capabilities.",
       tech: ["EJS", "Node.js", "Express", "MongoDB"],
@@ -238,12 +243,20 @@ function Page() {
           }`}
         >
           <h1 className="text-xl sm:text-2xl font-bold tracking-widest uppercase" style={{color:"#EDEDED"}}>
-            <ShinyText
+            {/* <ShinyText
               text="Hi I'm Yukti Payak"
               disabled={false}
               speed={3}
               className="custom-class"
-            />
+            /> */}
+            <TextType 
+  text={["I'm Yukti Payak"]}
+  typingSpeed={75}
+  pauseDuration={3000}
+  showCursor={true}
+  cursorCharacter=""
+  loop={false}
+/>
           </h1>
         </header>
 
@@ -255,14 +268,17 @@ function Page() {
         >
           <div className="space-y-8 order-2 md:order-1">
             <h1 className="text-2xl sm:text-5xl lg:text-3xl font-extrabold leading-tight">
-              <BlurText
-                text="MERN Stack Developer "
-                delay={150}
-                animateBy="letters"
-                direction="top"
-                className="text-2xl mb-8"
+<DecryptedText
+text="Mern Stack Developer"
+speed={100}
+maxIterations={20}
+characters="ABCD1234!?"
+className="revealed"
+parentClassName="all-letters"
+encryptedClassName="encrypted"
+animateOn="view"
+/>
 
-              />
             </h1>
             <p className="text-lg  max-w-lg" style={{color:"#EDEDED"}}>
               Computer Engineer and MERN Stack Developer specializing in building secure, scalable, and high-performance full-stack applications. With a strong engineering foundation and hands-on industry experience, I focus on clean architecture, JWT-based authentication, and optimized RESTful APIs to deliver reliable, production-ready solutions.
@@ -282,6 +298,7 @@ function Page() {
                 >
                   Resume
                 </StarBorder>
+
               </a>
               <div className="flex gap-4">
                 {socialLinks.map((link) => {
@@ -329,6 +346,7 @@ function Page() {
           speed={3}
           className="custom-class"
         />
+
       </h2>
     
       <div className="w-12 h-[2px] mx-auto mt-4 rounded-full opacity-20" style={{ background: "#EDEDED" }}></div>
@@ -455,7 +473,10 @@ function Page() {
       ))}
     </div>
   </div>
-</section>
+</section> 
+
+
+
 
 <section id="contact" className="w-full py-16 sm:py-24" style={{ background: "#171717" }}>
   <div className="container mx-auto px-4 max-w-6xl">
