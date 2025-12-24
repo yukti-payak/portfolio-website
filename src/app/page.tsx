@@ -281,7 +281,7 @@ animateOn="view"
 
             </h1>
             <p className="text-lg  max-w-lg" style={{color:"#EDEDED"}}>
-              Computer Engineer and MERN Stack Developer specializing in building secure, scalable, and high-performance full-stack applications. With a strong engineering foundation and hands-on industry experience, I focus on clean architecture, JWT-based authentication, and optimized RESTful APIs to deliver reliable, production-ready solutions.
+Computer Engineering Graduate & Full-Stack Developer with strong expertise in MERN Stack and Next.js, skilled in building end-to-end web solutions from frontend interfaces to backend APIs.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 pt-4">
