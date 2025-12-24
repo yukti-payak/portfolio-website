@@ -105,7 +105,7 @@ function Page() {
 
   const projectsData = [
     {
-      title: "ZenTrade : Interactive Analytic Suite",
+      title: "ZenTrade : Stock Trading Analytics Dashboard",
      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjHD7VdsC3kRtB2UoYJV0shx7jzmKYuONsSg&s",
       description:
         "Designed and developed a full-stack stock trading platform using the MERN stack, allowing users to place buy orders and track portfolio holdings through a fully responsive, feature-complete dashboard.",
