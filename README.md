@@ -20,6 +20,9 @@ A modern, responsive, and performance-optimized **developer portfolio website** 
 -  **Component-Based Architecture** – Clean, reusable React components
 -  **Scalable Structure** – Easy to extend with new sections and features
 
+## Deployed Link 
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://portfolio-website-ten-gilt-77.vercel.app/)
+
 
 
 
