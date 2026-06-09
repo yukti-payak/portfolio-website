@@ -23,6 +23,14 @@ A modern, responsive, and performance-optimized **developer portfolio website** 
 ## Deployed Link 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge&logo=vercel)](https://portfolio-website-ten-gilt-77.vercel.app/)
 
+## Screenshots 
+<img width="1899" height="772" alt="image" src="https://github.com/user-attachments/assets/fb65d7f3-826c-4a01-87a2-7db7203a74fe" />
+<img width="1897" height="915" alt="image" src="https://github.com/user-attachments/assets/98235dee-5852-4f34-9994-fcb110f114f7" />
+<img width="1897" height="906" alt="image" src="https://github.com/user-attachments/assets/652da761-693b-45dc-8aaf-90f9c5770187" />
+
+
+
+
 
 
 
